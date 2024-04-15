@@ -1,0 +1,55 @@
+
+Start
+    Function create_board(size)
+        board = matrix of size x size of characters '?'
+        Return board
+
+    Function display_board(board)
+        For each row in board
+            Display row joining the characters with a space
+        End For
+
+    Function place_random_signs(board, signs)
+        For each row in board
+            For each column in row
+                board[row][column] = randomly choose a sign from the list of signs
+            End For
+        End For
+
+    Function hide_sign(board, hidden_sign)
+        size = size of board
+        hidden_row = random number between 0 and size - 1
+        hidden_col = random number between 0 and size - 1
+        hidden_char = board[hidden_row][hidden_col]
+        board[hidden_row][hidden_col] = hidden_sign
+        Return hidden_row, hidden_col, hidden_char
+
+    Function main
+        size = read integer from input "Enter the size of the board: "
+        signs = list of characters '*', '#', '@', '$', '&'
+        repeat
+            Display "New game starting..."
+            board = create_board(size)
+            place_random_signs(board, signs)
+            display_board(board)
+            wait for 5 seconds
+
+            Display "Find the hidden symbol!\n"
+            hidden_row, hidden_col, hidden_char = hide_sign(board, 'X')
+            display_board(board)
+            guess = read from input "Enter your guess: "
+
+            if guess equals hidden_char then
+                Display "Correct! The hidden symbol was", hidden_char
+            else
+                Display "Incorrect. The hidden symbol was", hidden_char
+            end if
+
+            repeat
+                continue_playing = read from input "Do you want to continue playing? (y/n): "
+            until continue_playing is 'y' or 'n'
+        until continue_playing is 'n'
+    End main
+End
+
+stop
