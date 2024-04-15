@@ -1,0 +1,29 @@
+juego:
+
+El juego debe permitir al usuario especificar el tamaño del tablero.
+Se deben mostrar símbolos aleatorios en el tablero durante un período de tiempo.
+Después de un tiempo determinado, uno de los símbolos debe ser ocultado y reemplazado por una 'X'.
+El usuario debe adivinar qué símbolo estaba oculto.
+El juego debe preguntar al usuario si desea seguir jugando después de cada ronda.
+Diseño del código:
+
+Se necesitarán funciones para realizar diversas cosas, como crear el tablero, mostrar el tablero, colocar los símbolos aleatorios, ocultar un símbolo y manejar la lógica del juego.
+Manipulación del tablero:
+
+Se utilizará una estructura de datos bidimensional (matriz) para representar el tablero.
+Se deben establecer funciones para crear el tablero, colocar los símbolos aleatorios y ocultar un símbolo.
+Interacción con el usuario:
+
+Se deben proporcionar mensajes claros para guiar al usuario a través del juego.
+El programa debe solicitar la entrada del usuario para adivinar el símbolo oculto y para determinar si desea seguir jugando.
+Lógica del juego:
+
+Se necesitará una lógica para determinar si la respuesta del usuario es correcta o incorrecta.
+Se debe tener en cuenta el manejo de la repetición del juego y la finalización del mismo si el usuario decide no seguir jugando.
+ tiempo:
+
+Se necesita una forma de pausar la ejecución del programa durante un tiempo determinado antes de ocultar el símbolo.
+La sincronización del tiempo será crucial para asegurar que el juego fluya correctamente.
+Robustez del código:
+
+Se deben manejar posibles errores del usuario, como ingresar un valor incorrecto al adivinar el símbolo oculto.
